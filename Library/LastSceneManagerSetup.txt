@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Tercer Nivel.unity
+- path: Assets/Scenes/Nivel Principal 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
