@@ -375,9 +375,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Collectable.cs"
 "Assets/Scripts/Corazones.cs"
+"Assets/Scripts/GameOver.cs"
+"Assets/Scripts/GoalInteraction.cs"
+"Assets/Scripts/MenuInicial.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/ScoreTraker.cs"
 "Assets/Scripts/SpikeBehavior.cs"
+"Assets/Scripts/Trampolin.cs"
+"Assets/Scripts/Victoria.cs"
 "Assets/Scripts/Vida.cs"
 -langversion:9.0
 

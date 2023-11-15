@@ -22,13 +22,21 @@ public class ScoreTraker : MonoBehaviour
 
             if (_vida <= 0)
             {
-                // Aquí puedes manejar la lógica de Game Over o reiniciar la escena, según tus necesidades.
-                SceneManager.LoadScene(0);
+                ScoreTraker.instance.NivelActual = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(5);
             }
         }
     }
 
     public int score = 0;
+
+    private int nivelActual = 1;
+
+    public int NivelActual
+    {
+        get { return nivelActual; }
+        set { nivelActual = value; }
+    }
 
     void Start()
     {
@@ -75,7 +83,7 @@ public class ScoreTraker : MonoBehaviour
             vida += cantidadDeVidas;
             if (vida > 3)
             {
-                vida = 3;  // Aseguramos que no exceda el límite máximo de vidas
+                vida = 3;  
             }
         }
     }
