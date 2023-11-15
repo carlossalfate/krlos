@@ -378,7 +378,6 @@
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/ScoreTraker.cs"
 "Assets/Scripts/SpikeBehavior.cs"
-"Assets/Scripts/Trampolin.cs"
 "Assets/Scripts/Vida.cs"
 -langversion:9.0
 

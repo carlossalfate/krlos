@@ -12,14 +12,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D col;
     private int contadorDobleSalto = 0;
-    private Animator animator;
-    //private bool orientacion = true;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
-        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -37,17 +34,6 @@ public class PlayerController : MonoBehaviour
         float entradaMovimiento = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(entradaMovimiento * velocidadMovimiento, rb.velocity.y);
 
-        //Orientacion(entradaMovimiento);
-
-        if (entradaMovimiento != 0f)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
-
         if (Input.GetButtonDown("Jump"))
         {
             if (EstaEnElTerreno() || contadorDobleSalto < maxDobleSalto)
@@ -58,15 +44,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-    /*void Orientacion(float entradaMovimiento)
-    {
-        if (entradaMovimiento > 0 && !orientacion || entradaMovimiento < 0 && orientacion)
-        {
-            orientacion = !orientacion;
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-        }
-    }*/
 
     private bool EstaEnElTerreno()
     {
